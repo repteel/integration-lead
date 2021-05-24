@@ -24,17 +24,4 @@ public class UsersRepository {
         return usersCrudRepository.save(insert);
     }
 
-    /*
-    public Optional<Users> getProducto(int idProducto) {
-        return productoCrudRepository.findById(idProducto);
-    }
-
-    public Users save(Users users) {
-        return productoCrudRepository.save(users);
-    }
-
-    public void delete(int idProducto) {
-        productoCrudRepository.deleteById(idProducto);
-    }
-     */
 }

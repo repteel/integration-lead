@@ -40,7 +40,7 @@ public class UsersController {
 
         Optional<Users> email = usersService.getEmail(registerDto.getEmail());
         if (email.isPresent()){
-            return ResponseEntity.status(HttpStatus.OK).body(new Mensaje("Email Ya registrado"));
+            return ResponseEntity.status(HttpStatus.OK).body(new Mensaje(Util.MESSAGE_EMAIL_EXISTS));
         }else{
             registerDto.setPassword(new BCryptPasswordEncoder().encode(registerDto.getPassword()));
             registerDto.setToken(getJWTToken(registerDto.getName()));
